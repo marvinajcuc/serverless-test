@@ -1,0 +1,14 @@
+service: proyecto1
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  profile: majcuc
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          method: get
+          path: hello
